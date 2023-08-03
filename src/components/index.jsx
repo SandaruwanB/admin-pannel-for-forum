@@ -1,8 +1,11 @@
 import React from 'react'
+import Button from '@mui/material/Button'
 
 function index() {
   return (
-    <div>index</div>
+    <div>
+        <Button color='primary' variant='outlined'>Hello</Button>
+    </div>
   )
 }
 
