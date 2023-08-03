@@ -1,11 +1,18 @@
 import React from 'react'
-import Button from '@mui/material/Button'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import FourZeroFour from './404'
+import SignIn from './SignIn'
 
 function index() {
   return (
-    <div>
-        <Button color='primary' variant='outlined'>Hello</Button>
-    </div>
+    <Router>
+        <Routes>
+            <Route path='*' Component={FourZeroFour} />
+            <Route path='/' Component={SignIn} />
+            <Route path='/signin' Component={SignIn} />
+        </Routes>
+    </Router>
   )
 }
 
