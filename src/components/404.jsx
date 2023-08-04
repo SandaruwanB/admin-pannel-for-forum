@@ -6,4 +6,4 @@ function FourZeroFour() {
   )
 }
 
-export default FourZeroFour
+export default FourZeroFour;
