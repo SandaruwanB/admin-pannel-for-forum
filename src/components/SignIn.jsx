@@ -16,6 +16,8 @@ const showModal = ()=>{
 function SignIn() {
   const [loading, setLoading] = useState(true);
   const [isPassword, setIsPassword] = useState(true);
+  const [userName, setUserName] = useState("");
+  const [password, setPAssword] = useState("");
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -23,11 +25,14 @@ function SignIn() {
     }, 2000)
   },[setLoading]);
 
+  const submitLogin = ()=>{
+    alert(userName + password);
+  }
+
   const items = [
     {
       label : "Sign Up",
       key : 0,
-      onclick : ()=>showModal(),
     },
     {
       type : "divider"
@@ -90,12 +95,12 @@ function SignIn() {
                   <div className="form">
                     <div className="username">
                       <label htmlFor="username">User Name</label>
-                      <input type="text" id='username' placeholder='User Name' />
+                      <input type="text" id='username' placeholder='User Name' value={userName} onChange={(e)=>setUserName(e.target.value)}/>
                       <FaUserCog className='leftIcon'/>
                     </div>
                     <div className="password">
                       <label htmlFor="password">Password</label>
-                      <input type={isPassword ? "password" : "text"} name="password" id="password" placeholder='Password'/>
+                      <input type={isPassword ? "password" : "text"} name="password" id="password" placeholder='Password' value={password} onChange={(e)=>setPAssword(e.target.value)}/>
                       <FaLock className='leftIcon' style={{fontSize: '1rem'}}/>
                       {isPassword ? 
                       <FaEye className='eyeIcon' onClick={()=>setIsPassword(false)}/>
@@ -107,7 +112,7 @@ function SignIn() {
                       <a href="/forgot" style={{display : 'inline-block', }}>Forgot Password?</a>
                     </div>
                     <div className='buttonlogin'>
-                      <button>Sign In</button>
+                      <button onClick={()=>submitLogin()}>Sign In</button>
                     </div>
                     <div style={{width : '80%', marginLeft : '10%', marginTop : 50}}>
                       <Divider plain>Or</Divider>
