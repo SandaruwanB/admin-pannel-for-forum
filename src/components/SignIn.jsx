@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LineWave } from 'react-loader-spinner'
-import { Button } from 'antd'
-
+import {  Dropdown, Space } from 'antd'
+import { FaUser, FaCaretDown } from 'react-icons/fa'
 
 
 function SignIn() {
@@ -13,6 +13,19 @@ function SignIn() {
     }, 2000)
   },[setLoading]);
 
+  const items = [
+    {
+      label : "Sign Up",
+      key : 0,
+    },
+    {
+      type : "divider"
+    },
+    {
+      label : "Sign In",
+      key : 1,
+    }
+  ];
   
   return (
     <div>
@@ -20,8 +33,8 @@ function SignIn() {
         {loading ? 
         <div className='loader'>
           <LineWave
-            height="150"
-            width="150"
+            height="300"
+            width="300"
             radius="16"
             color="#091C7A"
             ariaLabel="loading"
@@ -31,9 +44,28 @@ function SignIn() {
         </div>
 
         :
-        <div>
-        <div className='test'>test text</div>
-        <Button type='primary' className='button'>button</Button>
+        <div className='content'>
+          <div className="top">
+            <div className='logo'>
+              <img src="/logo.png" alt="logo" />
+            </div>
+            <div className='icon'>
+              <Dropdown
+                menu={{items}}
+                trigger={['click']}
+              >
+                <p>
+                  <Space>
+                    <FaUser className='userIcon1' />
+                    <FaCaretDown className='downIcon' />
+                  </Space>
+                </p>
+              </Dropdown>
+            </div>
+          </div>
+          <div className='bottom'>
+            ashdkhakshd
+          </div>
         </div>
 
       }
