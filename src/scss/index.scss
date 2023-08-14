@@ -21,7 +21,7 @@
     flex-direction: column;
     .top{
         width: 100%;
-        height: 100px;
+        height: 80px;
         position: relative;
         display: flex;
         padding: 0px 60px;
@@ -55,7 +55,7 @@
             .downIcon{
                 font-size: 1.5rem;
                 position: absolute;
-                top: 44px;
+                top: 38px;
                 right: 46px;
             }
         }
@@ -88,9 +88,64 @@
                 }
                 .form{
                     margin-top: 10%;
-                    background-color: red;
                     width: 100%;
-                    height: 100%;
+                    input{
+                        width: 80%;
+                        margin-left: 10%;
+                        padding: 13px 35px;
+                        background: $inputbg;
+                        border: none;
+                        outline: none;
+                        border-radius: 2px;
+                    }
+                    label{
+                        margin-top: 20px;
+                        margin-left: 12%;
+                        padding-bottom: 8px;
+                    }
+                    .password,
+                    .username{
+                        position: relative;
+                        .leftIcon{
+                            position: absolute;
+                            top: 47%;
+                            left: 12%;
+                            color: $primary;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    .password{
+                        margin-top: 40px;
+                        .eyeIcon{
+                            color: $primary;
+                            font-size: 1.3rem;
+                            position: absolute;
+                            top: 47%;
+                            right: 12%;
+                            cursor: pointer;
+                        }
+                    }
+                    .buttonlogin{
+                        margin-top: 40px;
+                        text-align: center;
+                        button{
+                            background: $primary;
+                            outline: none;
+                            border: 2px solid $primary;
+                            color: $white;
+                            padding: 6px 20px;
+                            font-size: 1.1rem;
+                            font-weight: bold;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                background: $white;
+                                color: $primary2;
+                                border: 2px solid $primary2;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -103,12 +158,13 @@
                 text-align: left;
                 font-size: 2.5rem;
                 letter-spacing: 1px;
+                color: $primary;
             }
             p{
                 margin-top: 50px;
                 font-size: 1rem;
                 letter-spacing: 1px;
-                padding-bottom: 40px;
+                color: $uiblack;
             }
         }
 
