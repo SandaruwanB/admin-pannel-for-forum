@@ -16,8 +16,6 @@
 
 .content{
     height: 100vh;
-    width: 94%;
-    margin-left: 3%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,17 +35,35 @@
                 object-fit: cover;
                 border-radius: 4px;
             }
+            h5{
+                display: inline-block;
+                text-align: center;
+                position: absolute;
+                top: 32%;
+                font-size: 1.5rem;
+                margin-left: 10px;
+                letter-spacing: 1px;
+                color: $primary;
+            }
         }
         .icon{
+            cursor: pointer;
             .userIcon1{
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             .downIcon{
-                font-size: 2rem;
+                font-size: 1.5rem;
                 position: absolute;
-                top: 42px;
-                right: 42px;
+                top: 44px;
+                right: 46px;
             }
         }
+    }
+}
+
+@media (min-width : 650px){
+    .content{
+        width: 98%;
+        margin-left: 1%;
     }
 }

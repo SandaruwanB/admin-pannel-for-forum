@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { LineWave } from 'react-loader-spinner'
 import {  Dropdown, Space } from 'antd'
 import { FaUser, FaCaretDown } from 'react-icons/fa'
+import { Row, Col } from 'react-bootstrap'
 
 
 function SignIn() {
@@ -48,23 +49,28 @@ function SignIn() {
           <div className="top">
             <div className='logo'>
               <img src="/logo.png" alt="logo" />
+              <h5>EDUPRO</h5>
             </div>
             <div className='icon'>
               <Dropdown
                 menu={{items}}
                 trigger={['click']}
               >
-                <p>
+                <div>
                   <Space>
                     <FaUser className='userIcon1' />
                     <FaCaretDown className='downIcon' />
                   </Space>
-                </p>
+                </div>
               </Dropdown>
             </div>
           </div>
           <div className='bottom'>
-            ashdkhakshd
+            <Row>
+              <Col>dhjajhbdas</Col>
+              <Col>dhjajhbdas</Col>
+              <Col>dhjajhbdas</Col>
+            </Row>
           </div>
         </div>
 
