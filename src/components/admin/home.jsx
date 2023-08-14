@@ -1,20 +1,16 @@
 import React from 'react'
 import { Layout } from 'antd'
 import SideNav from './layouts/sideNav'
-const { Header, Content } = Layout
+import TopNav from './layouts/topNav'
+const { Content } = Layout
 
 
 function Home() {
   return (
     <Layout>
-        <SideNav/>
+        <SideNav key={1}/>
         <Layout>
-            <Header
-                style={{
-                    padding: 0,
-                    background: "#E4E9F2",
-                }}
-            />
+            <TopNav />
             <Content
                 style={{
                     margin: '24px 16px 0',

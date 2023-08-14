@@ -184,6 +184,21 @@
     }
 }
 
+.adminTopBarIcons{
+    position: relative;
+    width: 4.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .topIco{
+        cursor: pointer;
+        .topBarIcon{
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
 @media (min-width : 650px){
     .content{
         width: 98%;
