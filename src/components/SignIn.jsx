@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LineWave } from 'react-loader-spinner'
-import {  Dropdown, Space } from 'antd'
-import { FaUser, FaCaretDown } from 'react-icons/fa'
-import { Row, Col } from 'react-bootstrap'
+import {  Dropdown, Space, Row, Col } from 'antd'
+import { FaUser, FaCaretDown, FaCopyright } from 'react-icons/fa'
 
 
 function SignIn() {
@@ -65,12 +64,21 @@ function SignIn() {
               </Dropdown>
             </div>
           </div>
-          <div className='bottom'>
+          <div className='mid'>
             <Row>
-              <Col>dhjajhbdas</Col>
-              <Col>dhjajhbdas</Col>
-              <Col>dhjajhbdas</Col>
+              <Col xs={24} sm={24} md={7} lg={7} style={{background : "red"}}>
+                
+              </Col>
+              <Col xs={24} sm={24} md={5} lg={8} style={{background : "green"}}>
+                dhjajhbdas
+              </Col>
+              <Col xs={24} sm={24} md={12} lg={9} style={{background : "yellow"}}>
+                dhjajhbdas
+              </Col>
             </Row>
+          </div>
+          <div className="bottom">
+            <p><FaCopyright /> 2023 Copyright: <span style={{fontWeight: 'bold'}}>www.edupro.org</span></p>
           </div>
         </div>
 
