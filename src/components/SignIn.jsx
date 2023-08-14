@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { LineWave } from 'react-loader-spinner'
 import {  Dropdown, Space, Row, Col, Divider, Modal } from 'antd'
 import { FaUser, FaCaretDown, FaCopyright, FaUserCog, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 
 const showModal = ()=>{
@@ -14,6 +15,7 @@ const showModal = ()=>{
 }
 
 function SignIn() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [isPassword, setIsPassword] = useState(true);
   const [userName, setUserName] = useState("");
@@ -26,7 +28,7 @@ function SignIn() {
   },[setLoading]);
 
   const submitLogin = ()=>{
-    alert(userName + password);
+    navigate('/admin/dashboard');
   }
 
   const items = [
