@@ -2,7 +2,8 @@ import React from 'react'
 import { Layout } from 'antd'
 import SideNav from './layouts/sideNav'
 import TopNav from './layouts/topNav'
-const { Content } = Layout
+const {
+     Content } = Layout
 
 
 function Home() {

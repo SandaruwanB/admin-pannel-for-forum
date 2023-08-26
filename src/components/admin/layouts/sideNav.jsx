@@ -1,9 +1,11 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
 import { FaDashcube, FaUser, FaBell, FaMailBulk } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 const {Sider} = Layout
 
 function SideNav(props) {
+    const navigation = useNavigate();
   return (
     <Sider
         breakpoint="lg"
@@ -19,7 +21,7 @@ function SideNav(props) {
             EDUPRO
         </div>
         <Menu
-            style={{minHeight: '100vh', marginTop : 70}}
+            style={{minHeight: '100vh', marginTop : 70}}            
             theme="dark"
             mode="inline"
             defaultSelectedKeys={"1"}
@@ -27,12 +29,14 @@ function SideNav(props) {
                 {
                     key : "1",
                     icon : <FaDashcube/>,
-                    label : "Dashboard"
+                    label : "Dashboard",
+                    onClick : ()=>navigation("/admin/dashboard"),
                 },
                 {
                     key : "2",
                     icon : <FaUser/>,
-                    label : "Users"
+                    label : "Users",
+                    onClick : ()=>navigation('/admin/users'),
                 },
                 {
                     key : "3",

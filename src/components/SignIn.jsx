@@ -83,13 +83,12 @@ function SignIn() {
           </div>
           <div className='mid'>
             <Row>
-              <Col xs={0} sm={0} md={1} lg={1}/>
-              <Col xs={24} sm={24} md={9} lg={9} className='midCont'>
-                <img src="/images/bg1.png" alt="bg img" className='bgimgHome'/>
-              </Col>
-              <Col xs={24} sm={24} md={5} lg={5}  className='midCont2'>
-                <h2>WELCOME BACK TO EDUPRO</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit ducimus facere aliquid dolor eaque. Rerum non ad error accusantium recusandae ullam, aperiam pariatur, perferendis saepe debitis, fuga laboriosam corrupti tenetur?<br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perspiciatis nostrum nobis ex incidunt cupiditate voluptas reprehenderit consequuntur consectetur vitae in neque ratione temporibus rerum, veritatis aperiam itaque beatae a. <br /><br />Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem libero illo quia necessitatibus vitae tempora debitis tempore provident distinctio ea blanditiis earum deleniti accusamus nostrum dolorem veritatis nemo, ab quaerat!</p>
+              <Col xs={0} sm={0} md={2} lg={2}/>
+                <Col xs={24} sm={24} md={10} lg={10}  className='midCont2'>
+                  <img src="/images/bg1.png" alt="bg img" className='bgimgHome'/>
+              
+                  <h2>WELCOME BACK TO EDUPRO</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit ducimus facere aliquid dolor eaque. Rerum non ad error accusantium recusandae ullam, aperiam pariatur, perferendis saepe debitis, fuga laboriosam corrupti tenetur?<br /><br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto perspiciatis nostrum nobis ex incidunt cupiditate voluptas reprehenderit consequuntur consectetur vitae in neque ratione temporibus rerum, veritatis aperiam itaque beatae a. <br /><br />Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem libero illo quia necessitatibus vitae tempora debitis tempore provident distinctio ea blanditiis earum deleniti accusamus nostrum dolorem veritatis nemo, ab quaerat!</p>
                 </Col>
               <Col xs={24} sm={24} md={8} lg={8} className='midCont'>
                 <div className='formcontent'>
@@ -123,7 +122,7 @@ function SignIn() {
                   </div>
                 </div>
               </Col>
-              <Col xs={0} sm={0} md={1} lg={1}/>
+              <Col xs={0} sm={0} md={2} lg={2}/>
             </Row>
           </div>
           <div className="bottom">

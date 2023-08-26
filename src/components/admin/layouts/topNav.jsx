@@ -1,9 +1,25 @@
 import React from 'react'
-import { Layout } from 'antd'
-import { FaBell, FaUser, FaCaretDown } from 'react-icons/fa'
+import { Layout, Dropdown,Space } from 'antd'
+import { FaBell, FaUser, FaCaretDown, FaCog, FaSignOutAlt } from 'react-icons/fa'
 const {Header} = Layout
 
 function TopNav() {
+
+    const items = [
+        {
+          label : "Settings",
+          key : 0,
+          icon : <FaCog/>
+        },
+        {
+          type : "divider"
+        },
+        {
+          label : "Sign Out",
+          key : 1,
+          icon : <FaSignOutAlt/>
+        }
+    ];
 
   return (
     <Header
@@ -20,11 +36,17 @@ function TopNav() {
             <div className='topIco'>
                 <FaBell className='topBarIcon'/>
             </div>
-            <div className='topIco'>
-                <FaUser className='topBarIcon'/>
-                <FaCaretDown className='caretTopBar'/>
+            <Dropdown
+                className='topIco'
+                menu={{items}}
+                trigger={['click']}
+              >
+                  <Space>
+                        <FaUser className='topBarIcon'/>
+                        <FaCaretDown className='caretTopBar'/>
+                  </Space>
+              </Dropdown>
             </div>
-        </div>
     </Header>
   )
 }
